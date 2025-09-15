@@ -2,36 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My cat is Ecio Auditore</title>
+    <title>My cat — Ecio Auditore</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body bgcolor="#ccffcc"> <!-- світло-зелений фон -->
-
-    <header>
-        <h1>My favorite cat</h1>
-        <nav>
-            <a href="../index.html">Українська</a> |
-            <a href="index.html">Home</a> |
-            <a href="pages/contact.html">Contacts</a> |
-            <a href="pages/gallery.html">Gallery</a>
+<body class="main-body">
+    <header class="site-header">
+        <h1 id="title">My favorite cat</h1>
+        <nav class="menu">
+            <button><a href="index.html">Home</a></button>
+            <button><a href="pages/contact.html">Contacts</a></button>
+            <button><a href="pages/gallery.html">Gallery</a></button>
+            <button><a href="../index.html">Ukrainian</a></button>
         </nav>
         <hr>
     </header>
-    <img src="photo/cat.jpg" alt="Ecio Auditore" width="300">
 
-    <p>My cat's name was <strong>Ecio Auditore</strong>.  
-    He was a real little assassin among cats - agile, playful, and very intelligent.</p>
+    <main>
+        <img class="cat-photo" src="../photo/cat.jpg" alt="Ecio Auditore" width="300">
 
-    <h2>Brief information</h2>
-    <ul>
-        <li>Name: Ecio Auditore</li>
-        <li>Species: Devon Rex</li>
-        <li>Favorite game: jumping on feet and biting</li>
-        <li>Character: gentle, but sometimes like a demon</li>
-    </ul>
+        <p class="description">My cat's name was <strong>Ecio Auditore</strong>.  
+        He was a real little assassin among cats — agile, playful, and very intelligent.</p>
 
-    <p><a href="pages/contact.html">Contacts</a> | 
-       <a href="pages/gallery.html">Gallery</a></p>
-           <footer>
+        <h2 class="section-title">Brief information</h2>
+        <ul class="info-list">
+            <li>Name: Ecio Auditore</li>
+            <li>Species: Devon Rex</li>
+            <li>Favorite game: jumping on feet and biting</li>
+            <li>Character: gentle, but sometimes like a demon</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
         <hr>
         <p>&copy; 2025 Website about Ecio the cat 🐾</p>
     </footer>

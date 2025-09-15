@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Мій котик — Еціо Аудиторе</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body bgcolor="#ccffcc"> <!-- світло-зелений фон -->
-
-    <header>
-        <h1>Мій улюблений котик</h1>
-        <nav>
-            <a href="en/index.html">English</a> |
-            <a href="index.html">Головна</a> |
-            <a href="pages/contact.html">Контакти</a> |
-            <a href="pages/gallery.html">Галерея</a>
+<body class="main-body">
+    <header class="site-header">
+        <h1 id="title">Мій улюблений котик</h1>
+        <nav class="menu">
+            <button><a href="index.html">Головна</a></button>
+            <button><a href="pages/contact.html">Контакти</a></button>
+            <button><a href="pages/gallery.html">Галерея</a></button>
+            <button><a href="en/index.html">English</a></button>
         </nav>
         <hr>
     </header>
-    <img src="photo/cat.jpg" alt="Еціо Аудиторе" width="300">
 
-    <p>Мого котика звали <strong>Еціо Аудиторе</strong>.  
-    Він був справжнім маленьким ассассіном серед котів — спритний, грайливий та дуже розумний.</p>
+    <main>
+        <img class="cat-photo" src="photo/cat.jpg" alt="Еціо Аудиторе" width="300">
 
-    <h2>Коротка інформація</h2>
-    <ul>
-        <li>Ім’я: Еціо Аудиторе</li>
-        <li>Вид: девон рекс</li>
-        <li>Улюблена гра: стрибати на ноги та кусати</li>
-        <li>Характер: лагідний, але часом як біс</li>
-    </ul>
+        <p class="description">Мого котика звали <strong>Еціо Аудиторе</strong>.  
+        Він був справжнім маленьким ассассіном серед котів — спритний, грайливий та дуже розумний.</p>
 
-    <p><a href="pages/contact.html">Контакти</a> | 
-       <a href="pages/gallery.html">Галерея</a></p>
-           <footer>
+        <h2 class="section-title">Коротка інформація</h2>
+        <ul class="info-list">
+            <li>Ім’я: Еціо Аудиторе</li>
+            <li>Вид: девон рекс</li>
+            <li>Улюблена гра: стрибати на ноги та кусати</li>
+            <li>Характер: лагідний, але часом як біс</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
         <hr>
         <p>&copy; 2025 Сайт про котика Еціо 🐾</p>
     </footer>
 </body>
 </html>
+

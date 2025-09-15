@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Галерея</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body bgcolor="#ccffcc">
-
-    <header>
-        <h1>Галерея котика Еціо</h1>
-        <nav>
-            <a href="../en/index.html">English</a> |
-            <a href="../index.html">Головна</a> |
-            <a href="contact.html">Контакти</a> |
-            <a href="gallery.html">Галерея</a>
+<body class="main-body">
+    <header class="site-header">
+        <h1 id="title">Галерея котика</h1>
+        <nav class="menu">
+            <button><a href="../index.html">Головна</a></button>
+            <button><a href="contact.html">Контакти</a></button>
+            <button><a href="gallery.html">Галерея</a></button>
+            <button><a href="../en/index.html">English</a></button>
         </nav>
         <hr>
     </header>
 
-    <p>Ось кілька фото мого улюбленця:</p>
+    <main>
+        <div class="gallery">
+            <img src="../photo/cat1.jpg" alt="Еціо спить" width="250">
+            <img src="../photo/cat2.jpg" alt="Еціо п'є воду" width="250">
+            <img src="../photo/cat3.jpg" alt="Еціо жує цигарку" width="250">
+            <img src="../photo/cat4.jpg" alt="Еціо показує язика" width="250">
+            <img src="../photo/cat5.jpg" alt="Еціо в режимі вбивці" width="250">
+        </div>
+    </main>
 
-    <img src="../photo/cat1.jpg" alt="Еціо спить" width="250">
-    <img src="../photo/cat2.jpg" alt="Еціо п'є воду" width="250">
-    <img src="../photo/cat3.jpg" alt="Еціо жує цигарку" width="250">
-    <img src="../photo/cat4.jpg" alt="Еціо показує язика" width="250">
-    <img src="../photo/cat5.jpg" alt="Еціо увімкнув режим вбивці" width="250">
+    <!-- Модалка -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
 
-
-    <p><a href="../index.html">Назад на головну</a></p>
-        <footer>
+    <footer class="site-footer">
         <hr>
         <p>&copy; 2025 Сайт про котика Еціо 🐾</p>
     </footer>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const close = document.querySelector(".close");
+
+        document.querySelectorAll(".gallery img").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            });
+        });
+
+        close.onclick = () => modal.style.display = "none";
+        modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+    </script>
 </body>
 </html>
+

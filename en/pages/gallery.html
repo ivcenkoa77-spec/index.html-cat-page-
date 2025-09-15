@@ -3,33 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery</title>
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
-<body bgcolor="#ccffcc">
-
-    <header>
-        <h1>Ecio the Cat Gallery</h1>
-        <nav>
-            <a href="../index.html">Українська</a> |
-            <a href="../index.html">Home</a> |
-            <a href="contact.html">Contacts</a> |
-            <a href="gallery.html">Gallery</a>
+<body class="main-body">
+    <header class="site-header">
+        <h1 id="title">Cat's Gallery</h1>
+        <nav class="menu">
+            <button><a href="../index.html">Home</a></button>
+            <button><a href="contact.html">Contacts</a></button>
+            <button><a href="gallery.html">Gallery</a></button>
+            <button><a href="../../index.html">Ukrainian</a></button>
         </nav>
         <hr>
     </header>
 
-    <p>Here are some photos of my favorite:</p>
+    <main>
+        <div class="gallery">
+            <img src="../../photo/cat1.jpg" alt="Ecio is sleeping" width="250">
+            <img src="../../photo/cat2.jpg" alt="Ecio is drinking water" width="250">
+            <img src="../../photo/cat3.jpg" alt="Ecio chewing cigarette" width="250">
+            <img src="../../photo/cat4.jpg" alt="Ecio sticking tongue out" width="250">
+            <img src="../../photo/cat5.jpg" alt="Ecio killer mode" width="250">
+        </div>
+    </main>
 
-    <img src="../photo/cat1.jpg" alt="Ecio is sleeping" width="250">
-    <img src="../photo/cat2.jpg" alt="Ecio drinks water" width="250">
-    <img src="../photo/cat3.jpg" alt="Ecio chews a cigarette" width="250">
-    <img src="../photo/cat4.jpg" alt="Ecio sticks out his tongue" width="250">
-    <img src="../photo/cat5.jpg" alt="Ecio turned on assassin mode" width="250">
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
 
-
-    <p><a href="../index.html">Back to home</a></p>
-        <footer>
+    <footer class="site-footer">
         <hr>
         <p>&copy; 2025 Website about Ecio the cat 🐾</p>
     </footer>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const close = document.querySelector(".close");
+
+        document.querySelectorAll(".gallery img").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            });
+        });
+
+        close.onclick = () => modal.style.display = "none";
+        modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+    </script>
 </body>
 </html>
