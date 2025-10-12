@@ -10,7 +10,7 @@ body.main-body {
     text-align: center;
     background: #99e699;
     padding: 20px;
-    position: fixed;   /* фиксируем */
+    position: fixed;   /* фіксуемо */
     top: 0;
     left: 0;
     width: 100%;
@@ -44,7 +44,7 @@ body.main-body {
 
 /* Контент */
 main {
-    margin-top: 200px; /* отступ под хедер */
+    margin-top: 200px; /* відступ під хедер */
     text-align: center;
 }
 
